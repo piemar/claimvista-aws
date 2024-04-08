@@ -42,13 +42,13 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system to run t
    REALM_CLIENT_APP_ID=
    ```
 4. Set Environment variables, secrects and other things.
-
+ ```
  export ATLAS_USER="admin"                                                             
  export ATLAS_PASS="xxxxxxx"                                                                   
  export AWS_ACCESS_KEY_ID="xxxxx"
- export AWS_SECRET_ACCESS_KEY="pxxxxxxx"                  
+ export AWS_SECRET_ACCESS_KEY="pxxxxxxx"
  export ATLAS_HOST="claimvistadb.xxxx.mongodb.net" 
-
+ ```
 
 5. Create Application for ClaimVista in Atlas AppServices:
    ```
