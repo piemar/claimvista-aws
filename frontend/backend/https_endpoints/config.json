@@ -3,7 +3,7 @@
     {
         "http_method": "POST",
         "route": "/createClaim",
-        "function_name": "createClaimAWS",
+        "function_name": "createClaim",
         "validation_method": "NO_VALIDATION",
         "respond_result": true,
         "fetch_custom_user_data": false,

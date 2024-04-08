@@ -12,9 +12,11 @@ For more info see: https://www.mongodb.com/basics/create-database
 
 3. Created an API Key inside that project, and recorded the public and private api keys,for more information see https://www.mongodb.com/docs/atlas/configure-api-access/#create-an-api-key-for-a-project IMPORTANT set permisssions to Project Owner
 
-4.  Created Azure Open AI API Key 
-for more info see: https://learn.microsoft.com/en-us/azure/ai-services/openai/quickstart?tabs=command-line%2Cpython&pivots=programming-language-studio
+4.  Create AWS Credentials for AWS Bedrock
+You will need to create AWS Access Keys and a IAM User that can access Bedrock Service
+for more info see: https://docs.aws.amazon.com/bedrock/latest/userguide/setting-up.html
 
+5.  Activate the Bedrock anthropic.claude-3-sonnet in the AWS Bedrock Console. Availble in the us-east-1 region.
 
 ## Setup and Installation
 
@@ -29,21 +31,22 @@ There are 3 overall steps needed to get the demo up and running:
 
 The scripts below can be run multiple times, they will skip images in the dataset for which they've already generated the appropriate description / embeddings.  
 
-1. Set the appropriate environment variables: `ATLAS_USER`, `ATLAS_PASS`, `ATLAS_HOST`, `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT`. Update `db_config.py` with the database hostname. 
+1. Set the appropriate environment variables: `ATLAS_USER`, `ATLAS_PASS`, `ATLAS_HOST`, `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
 Setting environment variables
 
 ```bash
- export ATLAS_USER="username"                                                             
- export ATLAS_PASS="pwd"                                                                   
- export AZURE_OPENAI_API_KEY="aaaaae7b359c4c0xxxxxx6b6cc7a6da649b7"                       
- export ATLAS_HOST="claimvistadb.447kbl.mongodb.net" 
- export AZURE_OPENAI_ENDPOINT="https://sweden-hackathon-team.openai.azure.com"
+ export ATLAS_USER="admin"                                                             
+ export ATLAS_PASS="password"                                                                   
+ export AWS_ACCESS_KEY_ID="XXXXXX"
+ export AWS_SECRET_ACCESS_KEY="pjJ7j3WFLg3tHifXXXXXXX+o"                  
+ export ATLAS_HOST="claimvistadb.57kbl.mongodb.net" 
+
  
 ```
 
 2. Run `pip install -r requirements.txt`. This will install python packages required.
-3. Run `describe_images_initial.py`. This will use the gpt-4-vision model to generate a json document for each image in the `./dataset` directory, describing the damage and severity. We'll also include the base64 encoded image, and load the document into MongoDB. Example document:
+3. Run `python describe_images_initial.py`. This will use the gpt-4-vision model to generate a json document for each image in the `./dataset` directory, describing the damage and severity. We'll also include the base64 encoded image, and load the document into MongoDB. Example document:
 
 
 

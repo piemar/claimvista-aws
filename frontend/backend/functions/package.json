@@ -1,0 +1,10 @@
+{
+    "dependencies": {      
+      "@aws-sdk/client-bedrock-runtime": "^3.549.0",
+      "@aws-sdk/credential-providers": "^3.549.0",
+      "aws-sdk": "^2.1594.0",
+      "react": "^18.2.0",
+      "util": "^0.12.5",
+      "text-decoding": "^1.0.0"
+    }
+  }

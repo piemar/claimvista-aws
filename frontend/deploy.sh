@@ -32,5 +32,5 @@ cd backend
 echo "$configDataSource" > data_sources/mongodb-atlas/config.json
 echo "$configHosting" > hosting/config.json
 echo "$configAppService" > realm_config.json
-appservices push -y --project="$ATLAS_PROJECT_ID" --remote="$REALM_CLIENT_APP_ID" --include-hosting 
+appservices push -y --project="$ATLAS_PROJECT_ID" --remote="$REALM_CLIENT_APP_ID" --include-hosting --include-package-json
 cat hosting/config.json     
