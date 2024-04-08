@@ -1,0 +1,5 @@
+{
+    "name": "aws-access-key-id",
+    "value": "aws-access-key-id",
+    "from_secret": true
+}

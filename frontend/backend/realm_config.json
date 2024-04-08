@@ -1,7 +1,7 @@
 {
     "config_version": 20210101,
     "app_id": "claimvistadb",
-    "name": "claimvista",
+    "name": "claimvistaaws2",
     "location": "US-VA",
     "deployment_model": "GLOBAL"
 }

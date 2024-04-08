@@ -41,14 +41,22 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system to run t
    APPLICATION_NAME=claimvista
    REALM_CLIENT_APP_ID=
    ```
+4. Set Environment variables, secrects and other things.
 
-4. Create Application for ClaimVista in Atlas AppServices:
+ export ATLAS_USER="admin"                                                             
+ export ATLAS_PASS="xxxxxxx"                                                                   
+ export AWS_ACCESS_KEY_ID="xxxxx"
+ export AWS_ACCESS_SECRET="pxxxxxxx"                  
+ export ATLAS_HOST="claimvistadb.xxxx.mongodb.net" 
+
+
+5. Create Application for ClaimVista in Atlas AppServices:
    ```
    ./setup.sh
    ```
-5. Import src/claimvista.charts the claim vista charts, using the import function in Atlas Charts. You will need to connect configure the datasource. Once imported you will need to get the chart
+7. Import src/claimvista.charts the claim vista charts, using the import function in Atlas Charts. You will need to connect configure the datasource. Once imported you will need to get the chart
 
-6.  Update the API_BASE_URL and CHART_BASE_URL, you can retrieve this from the Atlas UI, and select embedd.  Below an example of src/config.js
+8.  Update the API_BASE_URL and CHART_BASE_URL, you can retrieve this from the Atlas UI, and select embedd.  Below an example of src/config.js
 
    ```
       const config = {
@@ -60,10 +68,10 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system to run t
       };
    ```
 
-7. Before deploying you must enable hosting using the Atlas UI. For more information see:  https://www.mongodb.com/docs/atlas/app-services/hosting/host-a-single-page-application/#procedure
+9. Before deploying you must enable hosting using the Atlas UI. For more information see:  https://www.mongodb.com/docs/atlas/app-services/hosting/host-a-single-page-application/#procedure
 
 
-8. Deploy application:
+10. Deploy application:
    ```
       ./deploy.sh
    ```

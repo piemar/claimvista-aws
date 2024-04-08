@@ -1,6 +1,7 @@
 [
+
     {
-        "name": "createClaim",
+        "name": "createClaimAWS",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
@@ -13,12 +14,6 @@
     },
     {
         "name": "getUnhadledClaims",
-        "private": false,
-        "run_as_system": true,
-        "disable_arg_logs": true
-    },
-    {
-        "name": "createClaim_copy",
         "private": false,
         "run_as_system": true,
         "disable_arg_logs": true
